@@ -1,14 +1,15 @@
 {
   "version": 2,
-  "buildCommand": "cd frontend && npm run build",
+  "installCommand": "npm install --prefix frontend && npm install --prefix backend",
+  "buildCommand": "npm --prefix frontend run build",
   "outputDirectory": "frontend/dist",
-  "routes": [
-    { "src": "/api/(.*)", "dest": "/backend/server.js" },
-    { "src": "/(.*)", "dest": "/frontend/dist/index.html" }
-  ],
   "functions": {
     "backend/server.js": {
-      "runtime": "@vercel/node"
+      "runtime": "nodejs18.x"
     }
-  }
+  },
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/backend/server.js" },
+    { "src": "/(.*)", "dest": "/frontend/dist/$1" }
+  ]
 }
