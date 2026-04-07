@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "experimental": {
+    "services": {
+      "frontend": {
+        "src": "frontend/vercel.json"
+      },
+      "backend": {
+        "src": "backend/vercel.json"
+      }
+    }
+  }
+}
