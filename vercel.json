@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "experimental": {
-    "services": {
-      "frontend": {
-        "src": "frontend/vercel.json"
-      },
-      "backend": {
-        "src": "backend/vercel.json"
-      }
+  "experimentalApplications": {
+    "frontend": {
+      "root": "frontend",
+      "framework": "vite"
+    },
+    "backend": {
+      "root": "backend",
+      "framework": "express"
     }
   }
 }
